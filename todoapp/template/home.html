@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'assets/style/one.css' %}" type="text/css">
+<style>
+
+</style>
+</head>  
+
+<body>
+    
+    <center>
+<h1>TODO APP</h1>
+<h1>WELCOME TO HOME PAGE</h1>
+<h3>
+<a href="{% url 'login' %}">Go to login page</a>
+</h3>
+<br>
+<br><br><br><br><br>
+<a href="{% url 'register' %}">Go to Register page</a>
+    </center>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'assets/style/one.css' %}" type="text/css">
+
+    
+</head>
+<body>
+<div>
+    <h4><a href="">Go back</a></h4>
+<center>
+<h1>TODO LIST</h1>
+<br>
+<br>
+<form action="{% url 'User:addtodo' %}" method="post">
+    <label>Enter Todo</label><br>
+    <input type="text" name="todo">
+    <br><br><br>
+    <label>Enter Description</label><br>
+    <input type="text" height="3cm" name="desc">
+    <br><br><br>
+    <input type="submit"><br><br>
+    <br><br><br>
+    <input type="reset">
+    </form>
+</center>
+</div>
+</body>
+</html>

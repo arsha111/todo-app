@@ -1,0 +1,32 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'assets/style/one.css' %}" type="text/css">
+
+     </head>  <body>
+         <center>
+        <h1>LOGIN PAGE</h1>
+        <br><br><br><br><br><br><br>
+        <form method="POST" action="{% url 'login' %}">
+            <label for="userid">Enter your name</label>
+            <input type="text" id="userid" name="username"required>
+            <br>
+            <br>
+            <label for="password">Enter your password</label>
+            <input type="text" id="pass" name="password" required>
+            <br>
+            <br>
+            <input type="submit" value="login">
+            
+
+        </form>
+        <br>
+        <br>
+        <h4>
+        {{msg}}
+        </h4>
+         </center>
+         </body>
+</html>
+          
+    

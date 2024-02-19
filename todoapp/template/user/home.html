@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'assets/style/one.css' %}" type="text/css">
+
+    <style>
+        div{margin-top: 5cm;}
+        table,th,td{border: 1px solid black;}
+    </style>
+
+</head>
+<body>
+    <a href="{% url 'User:addtodo' %}">Add Todo</a>
+    <div>
+        <center>
+            <h1>TODO LIST</h1>
+            <br>
+            <br>
+            <h2>Hi...., {{ name }}</h2>
+<table style="width: 100;">
+    <tr>
+        <th>Todo</th>
+        <th>Description</th>
+        <th>Edit/Delete</th>
+    </tr>
+{% for i in data %}
+    <tr>
+        <th>{{ i.Todo_name }}
+        </th>
+        <th>
+            {{ i.description }}
+        </th>
+        <th>
+            <a href="{% url 'User:edit' id=i.id %}">Edit</a>
+            <a href="{% url 'User:delete' id=i.id %}">Delete</a>
+        </th>
+    </tr>
+{% endfor %}
+    </table>
+        </center>
+    </div>
+    </body>
+    </html>
+
+

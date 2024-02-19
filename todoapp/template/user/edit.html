@@ -1,0 +1,27 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+        <div>
+            <h4><a href="{% url 'User:home' %}">Go Back</a></h4>
+            <center>
+                <h1>TODO LIST</h1>
+                <br>
+                <br>
+<form action="{% url 'User:edit1' %}" method="post">
+    <input type="text" height="3cm" name="id" value="{{ data.id }}" style="display: none;">
+    <label>Enter TODO</label><br>
+    <input type="text" name="todo" value="{{ data.Todo_name }}">
+    <br><br><br>
+    <label>Enter Description</label><br>
+    <input type="text" height="3cm" name="desc" value="{{ data.description }}">
+    <br><br><br>
+    <input type="submit" value="Edit">
+    <br><br><br>
+    <input type="reset">
+</form>               
+            </center>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html><head>
+   
+    <center>
+    <h1>This is registration page</h1>
+    </center>
+    </head>  
+
+<body>
+    <center>
+        <form method="post" action="{% url 'register' %}">
+            <label for="userid">Enter  your name</label>
+            <input type="text" id="userid" name="username" required>
+            <br>
+            <br>
+            <br>
+            <label for="mail">Enter your email id</label>
+            <input type="text" id="mail" name="mail" required>
+            <br>
+            <br>
+            <br>
+            <label for="pass">Enter your password</label>
+            <input type="password" id="pass" name="password" required>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="submit">
+            <input type="reset" value="Cancel">
+        
+        </form>
+        <h1> {{ replay }} </h1>
+    </center>
+</body>
+</html>
